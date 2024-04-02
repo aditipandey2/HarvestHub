@@ -1,0 +1,102 @@
+.nav-link {
+  font-size: 1.2rem; /* Adjust the value as needed */
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ecf7f2; /* Light green background */
+}
+
+h1 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  color: #ecf7f2; 
+}
+
+.featurette-heading {
+  color: #0b582a; /* Dark green */
+}
+
+span {
+  color: #0b7e3b; /* Lighter green */
+}
+
+h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 4em;
+  color: #ecf7f2; /* Dark green */
+}
+
+.white-section {
+  text-align: center;
+  background: linear-gradient(135deg, #16614c, #1b7a59); /* Gradient background */
+  color: #fff;
+  padding: 50px 0 16px 0;
+}
+
+.help {
+  text-align: right;
+  margin-right: 20px;
+  font-size: 1em;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  color: #fff; /* White */
+}
+
+.social-icon:hover {
+  color: #0b7e3b; /* Lighter green on hover */
+}
+
+.middle-container {
+  margin-top: 80px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.middle-container-img {
+  height: 300px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 5px solid #0a6633; /* Dark green border */
+}
+
+.body-content {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+/* Crop prediction section */
+.featurette-heading {
+  color: #0b582a; /* Dark green */
+  font-size: 2.5em; /* Increase font size */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+.text-muted {
+  color: #666; /* Dark gray */
+}
+
+/* Fertilizer prediction section */
+.featurette-heading {
+  color: #0b582a; /* Dark green */
+  font-size: 2.5em; /* Increase font size */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+.text-muted {
+  color: #666; /* Dark gray */
+}
+
+/* Weather prediction section */
+.featurette-heading {
+  color: #0b582a; /* Dark green */
+  font-size: 2.5em; /* Increase font size */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+.text-muted {
+  color: #666; /* Dark gray */
+}
