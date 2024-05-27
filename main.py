@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-import urllib.request  #for making request to api
+import urllib.request  
 import json
 import numpy as np
 import pickle
@@ -9,34 +9,32 @@ crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
 
-
 model = pickle.load(open('classifier.pkl', 'rb'))
 fertilizer = pickle.load(open('fertilizer.pkl', 'rb'))
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
-  title = 'Krishak Vriddhi-Home'
+  title = 'HarvestHub-Home'
   return render_template('index.html', title=title)
 
 
 @app.route('/spraying')
 def spraying():
-  title = 'Krishak Vriddhi-Spraying'
+  title = 'HarvestHub-Spraying'
   return render_template('spraying.html', title=title)
 
 
 @app.route('/schedule', methods=['get', 'post'])
 def schedule():
-  title = 'Krishak Vriddhi-Schedule'
+  title = 'HarvestHub-Schedule'
   return render_template('calendar.html', title=title)
 
 
 @app.route('/weather')
 def weather():
-  title = 'Krishak Vriddhi-Weather'
+  title = 'HarvestHub-Weather'
   return render_template('weather.html', title=title)
 
 
@@ -51,7 +49,6 @@ def otherCity():
   api = "06f887d390672440e1a79483d9babb5a"
   unit = "metric"
 
-  #source contains json data fromm api
   source = urllib.request.urlopen(
     "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" +
     api + "&units=" + unit).read()
@@ -80,13 +77,13 @@ def otherCity():
 
 @ app.route('/crop-recommend')
 def crop_recommend():
-    title = 'Krishak Vriddhi - Crop Recommendation'
+    title = 'HarvestHub - Crop Recommendation'
     return render_template('crop.html', title=title)
 
 
 @ app.route('/crop-recommend', methods=['POST'])
 def crop_prediction():
-    title = 'Krishak Vriddhi - Crop Recommendation'
+    title = 'HarvestHub - Crop Recommendation'
 
     if request.method == 'POST':
         N = int(request.form['nitrogen'])
@@ -104,7 +101,7 @@ def crop_prediction():
 
 @app.route('/fertilizer_recommend')
 def fertilizer_recommend():
-  title = 'Krishak Vriddhi - Fertilizer Recommendation'
+  title = 'HarvestHub - Fertilizer Recommendation'
   return render_template('fertilizer.html', title=title)
 
 

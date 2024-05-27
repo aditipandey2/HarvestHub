@@ -12,81 +12,92 @@
   <link rel="stylesheet" href="/static/css/weather.css">
   <!-- Linking BoxIcon for Icon -->
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/logo.png">
 
 </head>
 
 <body>
   <!-- Menubar -->
-  <header class="menubar">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Krishak Vriddhi🌾</a>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar" style="height:7%;">
+      <div class="container-fluid" >
+
+        <a class="navbar-brand" href="/">
+          <img src="/static/images/logo.png" alt="Logo" width="30" height="30"
+            class="d-inline-block align-text-top">
+          HarvestHub🌾
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse button1" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{{url_for('home')}}">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">HOME</a>
             </li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Prediction
+                FARMING GENIE
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{url_for('crop_recommend')}}">Crops</a></li>
-                <li><a class="dropdown-item" href="{{url_for('fertilizer_recommend')}}">Fertilizers</a></li>
 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="{{url_for('crop_recommend')}}">CROPS</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="{{url_for('fertilizer_recommend')}}">FERTILIZERS</a>
+                </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Remind Me
+                REMIND ME
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{url_for('spraying')}}">Spraying</a></li>
-                <li><a class="dropdown-item" href="{{url_for('schedule')}}">Schedule Event</a></li>
+                <li>
+                  <a class="dropdown-item" href="{{ url_for('spraying')}}">SPRAYING</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{{url_for('schedule')}}">SCHEDULE EVENT</a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="{{url_for('weather')}}">Weather</a>
+              <a class="nav-link" href="{{url_for('weather')}}">WEATHER FORECAST</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
-            </li>
+
           </ul>
           <div id="google_translate_element"></div>
-        <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-          <button type="button" class="btn btn-outline-light  my-2 mx-2" id="closeNav">Set Navbar</button>
-            <script>
-                   document.querySelector('#google_translate_element').addEventListener('click', margin_top)
-              function margin_top(){
-                document.getElementById("navbar").style.marginTop = "40px";
-              }
-              document.querySelector('#closeNav').addEventListener('click',margin_cancel)
-              function margin_cancel(){
-                document.getElementById("navbar").style.marginTop="0";
-              }
-              
-      
-    </script>
-          
 
-          <form class="d-flex search" role="search" method="POST" action="{{ url_for('otherCity') }}"> 
-            <input class="form-control me-2 mx-1 my-1" type="search" placeholder="Search City" name="CityName">
-            <button class="btn btn-outline-success " type="submit">search</button>
-          </form>
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+
+          </script>
+          <button type="button" class="btn btn-outline-light btn-sm my-2 mx-2" id="closeNav">Set Navbar</button>
+          <script>
+            document.querySelector('#google_translate_element').addEventListener('click', margin_top)
+            function margin_top() {
+              document.getElementById("navbar").style.marginTop = "40px";
+            }
+            document.querySelector('#closeNav').addEventListener('click', margin_cancel)
+            function margin_cancel() {
+              document.getElementById("navbar").style.marginTop = "0";
+            }
+
+
+          </script>
+
         </div>
+
       </div>
+
     </nav>
   </header>
   
